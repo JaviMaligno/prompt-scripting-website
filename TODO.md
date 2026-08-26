@@ -5,13 +5,13 @@
 - [X] Heading anchors: Add `rehype-slug` + `rehype-autolink-headings` so users can link to sections.
 - [X] Last updated: Read `mtime` of each Markdown file and display it on the page.
 - [X] External links: Render links with `target="_blank"` and `rel="noopener noreferrer"`.
-\n+- [ ] Finalize Terms of Service content.
+\n+- [X] Finalize Terms of Service content.
 
 ## SEO
 
 - [X] Update `public/sitemap.xml` with `/privacy`, `/terms`, `/data-handling-policy`, `/data-protection-impact-assessment`.
 - [X] Draft noindex: Add `noindex` option to `SeoHead` and apply it for `/terms` until finalized.
-\n+- [ ] Remove `noindex` from `/terms` after Terms are finalized.
+\n+- [X] Remove `noindex` from `/terms` after Terms are finalized.
 - [ ] Set `NEXT_PUBLIC_SITE_URL` in production so canonical/OG URLs are correct; update sitemap base URL accordingly.
 - [ ] Optional: Integrate `next-sitemap` to auto-generate `sitemap.xml`.
 

@@ -1,15 +1,15 @@
 
-**Effective Date:** [Insert Date]
+**Effective Date:** 26 August 2026
 
-Welcome to **ChatScriptor** (“the Service”), operated by **[Company Name]** (“we,” “our,” or “us”). These Terms of Service (“Terms”) govern your access and use of our browser extension, website, and related services.
+Welcome to **Prompt Scripter** (“the Service”), operated by **Javier Aguilar Martín, trading as AGILabs** (“we,” “our,” or “us”). These Terms of Service (“Terms”) govern your access and use of our browser extension, website, and related services.
 
-By installing or using ChatScriptor, you agree to be bound by these Terms. If you do not agree, please do not use the Service.
+By installing or using Prompt Scripter, you agree to be bound by these Terms. If you do not agree, please do not use the Service.
 
 ---
 
 ## 1. Overview of the Service
 
-ChatScriptor allows users to capture, store, and re-use their own prompts and responses from supported AI platforms (such as OpenAI’s ChatGPT, Anthropic’s Claude, or Google’s Gemini).
+Prompt Scripter allows users to capture, store, and re-use their own prompts and responses from supported AI platforms (such as OpenAI’s ChatGPT, Anthropic’s Claude, or Google’s Gemini).
 
 - The Service does **not perform scraping** or background harvesting.
     
@@ -28,7 +28,7 @@ We are **not affiliated with OpenAI, Google, Anthropic, or any other AI provider
     
 - You are solely responsible for the content you generate, upload, or store, including any personally identifiable information (“PII”).
     
-- You agree not to use ChatScriptor for unlawful purposes, including but not limited to:
+- You agree not to use Prompt Scripter for unlawful purposes, including but not limited to:
     
     - Sharing or storing illegal content.
         
@@ -73,16 +73,16 @@ We may update retention periods as required to stay consistent with the policies
 
 - You own your inputs and outputs.
     
-- [Company Name] owns all rights in the ChatScriptor software, user interface, and associated services.
+- Javier Aguilar Martín owns all rights in the Prompt Scripter software, user interface, and associated services.
     
-- You may not copy, modify, reverse-engineer, or resell ChatScriptor without our written consent.
+- You may not copy, modify, reverse-engineer, or resell Prompt Scripter without our written consent.
     
 
 ---
 
 ## 6. Disclaimers
 
-- ChatScriptor is provided on an **“as is” and “as available”** basis.
+- Prompt Scripter is provided on an **“as is” and “as available”** basis.
     
 - We do not guarantee uninterrupted service or error-free operation.
     
@@ -95,9 +95,12 @@ We may update retention periods as required to stay consistent with the policies
 
 To the maximum extent permitted by law:
 
-- [Company Name] shall not be liable for any indirect, incidental, or consequential damages.
+- Javier Aguilar Martín shall not be liable for any indirect, incidental, or consequential damages.
     
-- Our total liability to you will not exceed the greater of **(a)** $100 or **(b)** the total fees you paid us in the 12 months preceding the claim.
+- Our total liability to you will not exceed the greater of **(a)** £100 or **(b)** the total fees you paid us in the 12 months preceding the claim.
+    
+
+Nothing in these Terms excludes or limits liability where it would be unlawful to do so, including liability for death or personal injury caused by negligence, or for fraud. If you use the Service as a consumer, your statutory rights are not affected.
     
 
 ---
@@ -119,8 +122,8 @@ You may stop using the Service at any time.
 
 ## 9. Governing Law
 
-These Terms shall be governed by the laws of **[Jurisdiction]**, without regard to conflict of law principles.  
-Any disputes shall be resolved in the courts of **[Jurisdiction]**.
+These Terms shall be governed by the laws of **England and Wales**, without regard to conflict of law principles.  
+Any disputes shall be resolved in the courts of **England and Wales**.
 
 ---
 
@@ -133,4 +136,4 @@ We may update these Terms from time to time. If material changes occur, we will 
 ## 11. Contact
 
 For questions about these Terms, please contact us at:  
-**[Company Email / Contact Page]**
+**javiecija96@gmail.com**

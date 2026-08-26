@@ -52,7 +52,7 @@ Here’s a simple but **GDPR-aligned** Privacy Policy draft you can publish next
 
 **Effective Date:** [Insert Date]
 
-This Privacy Policy explains how **[Company Name]** (“we,” “our,” or “us”) collects, uses, and protects your information when you use **ChatScriptor** (“the Service”).
+This Privacy Policy explains how **[Company Name]** (“we,” “our,” or “us”) collects, uses, and protects your information when you use **Prompt Scripter** (“the Service”).
 
 By installing or using the Service, you agree to the practices described in this Policy.
 
@@ -135,7 +135,7 @@ Your data may be processed in the United Kingdom and other countries. We comply 
 
 ## 7. Third-Party Services
 
-ChatScriptor interacts with third-party AI platforms (e.g., OpenAI, Anthropic, Google). Your use of those platforms is governed by their own terms and policies.
+Prompt Scripter interacts with third-party AI platforms (e.g., OpenAI, Anthropic, Google). Your use of those platforms is governed by their own terms and policies.
 
 We do not control how those providers process or retain data.
 
