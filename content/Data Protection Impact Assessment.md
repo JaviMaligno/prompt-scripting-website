@@ -1,6 +1,6 @@
 # Data Protection Impact Assessment (DPIA) – Draft Checklist
 
-**Project:** ChatScriptor – Browser Extension + Backend Service  
+**Project:** Prompt Scripter – Browser Extension + Backend Service  
 **Owner:** [Company Name]  
 **Date:** [Insert Date]  
 **Version:** 0.1 (Draft)
@@ -24,7 +24,7 @@
         
 - **Stakeholders**
     
-    - Users of ChatScriptor
+    - Users of Prompt Scripter
         
     - [Company Name] staff (developers, admin)
         
@@ -51,7 +51,7 @@
         
 - **Data Flows**
     
-    1. User interacts with AI site → ChatScriptor captures content at request.
+    1. User interacts with AI site → Prompt Scripter captures content at request.
         
     2. Data stored in [Cloud/Postgres/Storage provider].
         

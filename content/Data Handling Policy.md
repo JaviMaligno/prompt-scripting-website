@@ -9,13 +9,13 @@
 
 ## 1. Purpose
 
-This policy sets out how **ChatScriptor** staff must handle user data responsibly and securely, in compliance with UK GDPR, EU GDPR, and other applicable regulations.
+This policy sets out how **Prompt Scripter** staff must handle user data responsibly and securely, in compliance with UK GDPR, EU GDPR, and other applicable regulations.
 
 ---
 
 ## 2. Scope
 
-This policy applies to all personal data and user-generated content processed by ChatScriptor, including:
+This policy applies to all personal data and user-generated content processed by Prompt Scripter, including:
 
 - Prompts, responses, and datasets stored by users.
     
