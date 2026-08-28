@@ -11,7 +11,7 @@ export function Footer() {
           <Link href="/terms" className="hover:text-gray-900">Terms of Service</Link>
           <Link href="/data-handling-policy" className="hover:text-gray-900">Data Handling Policy</Link>
           <Link href="/data-protection-impact-assessment" className="hover:text-gray-900">DPIA</Link>
-          <a href="mailto:contact@example.com" className="hover:text-gray-900">Contact</a>
+          <a href="mailto:info@javieraguilar.ai" className="hover:text-gray-900">Contact</a>
         </nav>
       </div>
     </footer>

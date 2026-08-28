@@ -136,4 +136,4 @@ We may update these Terms from time to time. If material changes occur, we will 
 ## 11. Contact
 
 For questions about these Terms, please contact us at:  
-**javiecija96@gmail.com**
+**info@javieraguilar.ai**

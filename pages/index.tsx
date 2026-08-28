@@ -5,6 +5,7 @@ import { Hero } from '@/components/sections/Hero'
 import { Features } from '@/components/sections/Features'
 import { Demo } from '@/components/sections/Demo'
 import { CTA } from '@/components/sections/CTA'
+import { Waitlist } from '@/components/sections/Waitlist'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Features />
         <Demo />
         <CTA />
+        <Waitlist />
       </main>
       <Footer />
     </>

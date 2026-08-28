@@ -69,6 +69,10 @@ By installing or using the Service, you agree to the practices described in this
 
 We do **not** automatically collect your chat content unless you request storage.
 
+- **Mailing List Data**: If you submit your email address through the sign-up form on
+  our website, we store that address so we can write to you about Prompt Scripter.
+  Giving it is entirely optional and is not required to use the Service.
+
 ---
 
 ## 2. How We Use Your Data
@@ -96,6 +100,11 @@ We do **not** sell or share your data with advertisers.
     
 - We may retain deleted data briefly (within third-party AI providers’ retention policies, e.g. 24h–55 days) for safety and legal purposes.
     
+- An email address submitted through the website sign-up form is kept until you ask us
+  to remove it, which you can do at any time by writing to **info@javieraguilar.ai**.
+  We use it only to send occasional updates about Prompt Scripter. We do not sell it,
+  and we do not pass it to anyone else for their own marketing.
+    
 
 ---
 
@@ -114,7 +123,7 @@ If you are located in the UK, EU, or another jurisdiction with data protection l
 - Port your data (export in machine-readable format).
     
 
-You can exercise these rights by contacting us at **[Contact Email]**.
+You can exercise these rights by contacting us at **info@javieraguilar.ai**.
 
 ---
 
@@ -156,4 +165,4 @@ We may update this Privacy Policy from time to time. We will notify you of signi
 ## 10. Contact Us
 
 For questions about this Privacy Policy or to exercise your rights, please contact us at:  
-**[Company Email / Address]**
+**info@javieraguilar.ai**
