@@ -12,12 +12,17 @@ export function Navbar({ className }: NavbarProps) {
         <Link href="/" className="text-gray-900 font-semibold text-lg" aria-label="Go to homepage">
           Prompt Scripter
         </Link>
-        <a
-          href={CHROME_INSTALL_URL}
-          className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-        >
-          Install for Chrome
-        </a>
+        <nav className="flex items-center gap-4 sm:gap-6">
+          <Link href="/pricing" className="text-gray-600 hover:text-gray-900">
+            Pricing
+          </Link>
+          <a
+            href={CHROME_INSTALL_URL}
+            className="inline-flex items-center rounded-md bg-primary px-4 py-2 text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          >
+            Install for Chrome
+          </a>
+        </nav>
       </div>
     </header>
   )
