@@ -24,3 +24,7 @@
 
 - [X] DRY component: Create a reusable `MarkdownPage` component to reduce duplication.
 - [X] Move Markdown to `content/` (code reads from `content/` with fallback to `public/`; move files when convenient).
+
+## Waitlist
+
+- [ ] Set `WAITLIST_API_URL` (`https://prompt-scripter.vercel.app/api/waitlist`) and `WAITLIST_TOKEN` in Vercel for **both** Preview and Production. Neither is `NEXT_PUBLIC_`; they are read only inside `pages/api/waitlist.ts`. Until they are set the form returns 503 with "Sign-ups are not available right now."
