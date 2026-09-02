@@ -35,24 +35,98 @@ const UPGRADE_STEPS: readonly UpgradeStep[] = [
   },
 ]
 
+/** Where the price comes from. Public data, so no secret and no NEXT_PUBLIC_. */
+const PRICE_ENDPOINT =
+  process.env.BILLING_PRICE_URL || 'https://prompt-scripter.vercel.app/api/billing/price'
+
+/** What GET /api/billing/price returns. Deliberately narrower than a Stripe Price. */
+interface PriceResponse {
+  readonly currency?: string
+  readonly unit_amount?: number
+  readonly interval?: string
+  readonly tax_behavior?: string
+  readonly currency_options?: Record<string, { readonly unit_amount?: number }>
+}
+
 /**
- * The price slot.
+ * Minor units to something a person reads.
  *
- * `proPrice` is null today, on purpose: no amount, currency or placeholder
- * number is written anywhere in this repository (Stripe owns the price), and
- * PlanCard renders a sensible fallback when it gets null.
+ * The /100 holds for every currency this is priced in (GBP, EUR, USD). It would
+ * be wrong for a zero-decimal currency such as JPY, so if one is ever added the
+ * divisor has to come from the currency rather than be assumed here.
+ */
+function formatAmount(minorUnits: number, currency: string): string {
+  return new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: currency.toUpperCase(),
+    minimumFractionDigits: minorUnits % 100 === 0 ? 0 : 2,
+  }).format(minorUnits / 100)
+}
+
+function taxSentence(behaviour: string | undefined, others: readonly string[]): string {
+  // Three cases, and the third is the one this price is actually in.
+  //
+  // The Pro price carries no tax_behavior of its own, so Stripe reports
+  // 'unspecified' and the account setting decides per currency: tax inside the
+  // figure everywhere except USD and CAD, where it is added at checkout.
+  //
+  // Treating 'unspecified' as "tax added" — the tempting default — would make
+  // £10 read as £10 plus VAT when the VAT is already inside it, i.e. it would
+  // advertise the product as more expensive than it is.
+  let base: string
+  if (behaviour === 'inclusive') {
+    base = 'Tax included.'
+  } else if (behaviour === 'exclusive') {
+    base = 'Tax is added at checkout, based on where you are.'
+  } else {
+    base = 'Tax included, except in USD and CAD where it is added at checkout.'
+  }
+  if (!others.length) return base
+  return `${base} Also priced in ${others.join(' and ')}; Stripe charges you in yours.`
+}
+
+/**
+ * The price slot, filled from the backend rather than from this repository.
  *
- * To turn the price on, build a `ProPrice` here from the Stripe Price object
- * and return it — read STRIPE_SECRET_KEY and the Pro price id server-side,
- * without a NEXT_PUBLIC_ prefix, the way pages/api/waitlist.ts reads its
- * credentials, and keep returning null if either is missing so a build never
- * fails or invents a figure. Add `revalidate` at the same time, so a price
- * changed in the Stripe dashboard reaches the page without a redeploy.
- * Nothing below this function needs to change.
+ * No amount, currency or placeholder number is written here: Stripe owns the
+ * price, and a copy in this repo would be a second source that drifts the first
+ * time it changes. The backend already holds the Stripe key and the price id, so
+ * it exposes the figures at /api/billing/price — public, because they are what
+ * Stripe prints on the checkout to anybody who clicks through. That way this
+ * project needs no Stripe credential of its own.
+ *
+ * `revalidate` is why a price changed in the Stripe dashboard reaches this page
+ * on its own, without a redeploy.
+ *
+ * A failure returns null and PlanCard falls back to its own wording. A build
+ * must never fail, and must never invent a figure, because the backend happened
+ * to be asleep for eight seconds.
  */
 export async function getStaticProps() {
-  const proPrice: ProPrice | null = null
-  return { props: { proPrice } }
+  let proPrice: ProPrice | null = null
+
+  try {
+    const response = await fetch(PRICE_ENDPOINT, { signal: AbortSignal.timeout(8000) })
+    if (response.ok) {
+      const data = (await response.json()) as PriceResponse
+      const { unit_amount: amount, currency, interval } = data
+      if (typeof amount === 'number' && currency && interval) {
+        const others = Object.keys(data.currency_options || {})
+          .filter((code) => code !== currency)
+          .map((code) => code.toUpperCase())
+          .sort()
+        proPrice = {
+          amount: formatAmount(amount, currency),
+          interval,
+          taxNote: taxSentence(data.tax_behavior, others),
+        }
+      }
+    }
+  } catch {
+    // Unreachable, slow, or serving something unexpected: show the fallback.
+  }
+
+  return { props: { proPrice }, revalidate: 3600 }
 }
 
 export default function Pricing({ proPrice }: PricingProps) {
