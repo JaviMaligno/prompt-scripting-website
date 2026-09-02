@@ -97,7 +97,7 @@ Stripe does not accept purchases from every country. A small number of jurisdict
 
 You can cancel Pro at any time. There is no minimum term, no notice period, and no cancellation fee.
 
-To cancel, open the extension popup and use **Manage plan**, which takes you to Stripe's billing portal. Cancel there and it takes effect immediately - you do not have to ask us, and you do not have to wait for us. If you would rather not, or the control is not working for you, write to **info@javieraguilar.ai** and we will action it and confirm by email. Both routes do exactly the same thing.
+To cancel, open the extension popup and use **Manage plan**, which takes you to Stripe's billing portal. Cancel there and it is done at once, with no request to make and no reply to wait for; when it stops is covered in the next paragraph. If you would rather not, or the control is not working for you, write to **info@javieraguilar.ai** and we will action it and confirm by email. Both routes do exactly the same thing.
 
 **Cancelling stops the next payment; it does not end the month you have already paid for.** You keep Pro until the end of the current billing period, and the account moves to the free plan the day after that period ends. We do not, by default, refund part of a month when you cancel partway through it — but see section 7, which may give you money back regardless.
 
