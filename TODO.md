@@ -12,7 +12,10 @@
 - [X] Update `public/sitemap.xml` with `/privacy`, `/terms`, `/data-handling-policy`, `/data-protection-impact-assessment`.
 - [X] Draft noindex: Add `noindex` option to `SeoHead` and apply it for `/terms` until finalized.
 \n+- [X] Remove `noindex` from `/terms` after Terms are finalized.
-- [ ] Set `NEXT_PUBLIC_SITE_URL` in production so canonical/OG URLs are correct; update sitemap base URL accordingly.
+- [X] Set `NEXT_PUBLIC_SITE_URL` in production so canonical/OG URLs are correct; update sitemap base URL accordingly.
+      Done 2026-08-28: the variable is set in Production, and `public/sitemap.xml` had six
+      entries pointing at `http://localhost:3000` — a crawler discards every one of those,
+      and being a static file it would never have picked the host up from the environment.
 - [ ] Optional: Integrate `next-sitemap` to auto-generate `sitemap.xml`.
 
 ## Styling
@@ -27,19 +30,39 @@
 
 ## Waitlist
 
-- [ ] Set `WAITLIST_API_URL` (`https://prompt-scripter.vercel.app/api/waitlist`) and `WAITLIST_TOKEN` in Vercel for **both** Preview and Production. Neither is `NEXT_PUBLIC_`; they are read only inside `pages/api/waitlist.ts`. Until they are set the form returns 503 with "Sign-ups are not available right now."
+- [X] Set `WAITLIST_API_URL` and `WAITLIST_TOKEN` in Vercel for **both** Preview and Production.
+      Done 2026-08-28, and verified end to end against production: `GET` gives 405, a valid
+      address stores and returns 201, an invalid one 400, and the honeypot returns the same
+      success message while the logs confirm it forwarded nothing.
 
 ## Pricing & payments
 
-- [ ] **Show the Pro price.** `pages/pricing.tsx` -> `getStaticProps` returns `proPrice: null`
-      today. Build a `ProPrice` (`lib/pricing.ts`) from the Stripe Price object there and
-      return it; `components/pricing/PlanCard.tsx` already renders it. Read the Stripe
-      secret and the Pro price id server-side without a `NEXT_PUBLIC_` prefix, the way
-      `pages/api/waitlist.ts` reads its credentials, and keep returning `null` when either
-      is missing so a build never fails or invents a figure. Add `revalidate` at the same
-      time so a dashboard price change lands without a redeploy. No amount, currency or
-      placeholder number goes into this repository.
-- [ ] Point Stripe's Checkout Session at `/checkout/success` and `/checkout/cancelled`.
-      Both are `noindex`. Neither reads `session_id`; entitlement comes from the webhook.
-- [ ] Confirm a cancel path actually exists for the customer (extension popup control or a
-      handled inbox at info@javieraguilar.ai). Terms section 6 promises one.
+- [X] **Show the Pro price.** Done 2026-09-02, though not the way this entry proposed.
+      Reading `STRIPE_SECRET_KEY` here would have meant a second Stripe secret to rotate for
+      read-only data. The backend already holds the key and the price id, so it publishes the
+      figures at `GET /api/billing/price` and `getStaticProps` reads that. No credential in
+      this project, no amount in this repository, and `revalidate: 3600` so a dashboard change
+      lands on its own.
+      The trap, found only against the live endpoint: the price carries no `tax_behavior`, so
+      Stripe reports `unspecified` and the account decides per currency. Treating that as
+      "tax added at checkout" would have advertised GBP 10 as GBP 10 plus VAT when the VAT is
+      already inside it.
+
+- [X] Point Stripe's Checkout Session at `/checkout/success` and `/checkout/cancelled`.
+      Done: the defaults live in the backend's `settings.py`. They had pointed at
+      `prompt-scripter.vercel.app`, which is the API — a customer who had just paid would
+      have landed on `{"detail":"Not Found"}` as raw JSON.
+- [X] Confirm a cancel path actually exists for the customer. Done: the popup's plan strip
+      shows **Manage plan** for a subscriber, which opens Stripe's billing portal.
+      NOT YET EXERCISED against a live subscription — see the note at the bottom.
+
+## Still open, and worth knowing before a launch
+
+- [ ] **No real payment has ever run through the live setup.** Everything live was verified
+      without charging: a `cs_live_` session created, the webhook rejecting unsigned requests,
+      the limits correct. The full round trip was verified in test mode only. The first real
+      customer is also the first real test of the billing.
+- [ ] **The billing portal's happy path is unverified.** It needs a live subscription. What is
+      verified is the failure path: it reports the error and restores the button.
+- [ ] Two clauses in the Terms want a solicitor's eye: the liability cap and the refund
+      wording, which has to sit correctly alongside Stripe's own 60-day refund power.
