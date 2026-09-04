@@ -4,6 +4,19 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/*
+          Search Console ownership. Public by design: the token proves that
+          whoever controls this HTML controls the site, and it is in view-source
+          either way, so there is nothing here to keep secret.
+
+          It stays permanently. Removing it un-verifies the property — Google
+          re-checks periodically rather than once — and it lives in the document
+          rather than in SeoHead so no page can drop it by rendering its own head.
+        */}
+        <meta
+          name="google-site-verification"
+          content="Lj4JEAsXOZFMMgfZdykPadVwOjAFNAHljTPFuKdUrRQ"
+        />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
