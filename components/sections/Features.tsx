@@ -9,8 +9,8 @@ const FEATURES: FeatureItem[] = [
     description: 'Save any prompt as a reusable template with dynamic variables.',
   },
   {
-    title: 'Organize with Workflows',
-    description: 'Chain templates with conditional logic to build powerful flows.',
+    title: 'Run It Over a List',
+    description: 'Feed a template a list of rows and run it through the chat, row by row.',
   },
   {
     title: 'Works Everywhere You Do',
