@@ -8,6 +8,16 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 ---
 
+## 1.1.4 — 2026-09-04
+
+- The strip at the top of the popup now shows what you have used against what your plan allows: templates, runs this month, and the largest list you can send in one go. That last number used to appear only when an upload was refused, which is the worst moment to learn a limit exists.
+- A new **Account** section in the popup. **Download my data** gives you one file with your templates, your saved values, your datasets and your runs.
+- **Delete account** removes your account and everything in it, permanently. You confirm with your password, and if you have a subscription it is cancelled as part of the same action. There is no undo, and the popup says so before it asks.
+
+Both of those were already promised in Sections 2 and 11 of the Terms, and until this version the only way to get either was to write to us and wait for a reply.
+
+---
+
 ## 1.1.3 — 2026-09-02
 
 - Your password manager can now fill in the sign-in form. Chrome would offer a saved login, but choosing it did nothing at all. That was our form's fault, not the browser's.
