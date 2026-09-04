@@ -8,6 +8,7 @@ export function Footer() {
         <p>© {year} Prompt Scripter</p>
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           <Link href="/pricing" className="hover:text-gray-900">Pricing</Link>
+          <Link href="/changelog" className="hover:text-gray-900">Changelog</Link>
           <Link href="/privacy" className="hover:text-gray-900">Privacy Policy</Link>
           <Link href="/terms" className="hover:text-gray-900">Terms of Service</Link>
           <Link href="/data-handling-policy" className="hover:text-gray-900">Data Handling Policy</Link>
