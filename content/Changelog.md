@@ -2,7 +2,7 @@
 
 What changed in each version of the Prompt Scripter extension for Chrome, newest first. Each line describes what the change means for someone using the extension rather than what was edited in the code.
 
-**1.1.3 is the version the Chrome Web Store serves. Checked on 2026-09-04.** Chrome installs an update only while the extension is idle, so an install can sit on an older version for a few hours after a new one is published.
+**1.1.4 is the version the Chrome Web Store serves. Checked on 2026-09-07.** Chrome installs an update only while the extension is idle, so an install can sit on an older version for a few hours after a new one is published.
 
 The date on each entry is the day that version was packaged. It is not the day the version was published, and no entry here records which version reached whom.
 

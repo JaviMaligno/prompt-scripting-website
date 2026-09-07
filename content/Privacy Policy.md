@@ -121,7 +121,9 @@ If you are located in the UK, EU, or another jurisdiction with data protection l
 - Withdraw your consent at any time, where we rely on consent. Withdrawing it does not affect processing that already took place.
     
 
-You can exercise these rights by contacting us at **info@javieraguilar.ai**. We will respond within one month.
+Two of these are now self-service, in the extension popup under **Account**. **Download my data** gives you one file containing your templates, your saved values, your datasets and your runs. **Delete account** removes your account and everything in it permanently — you confirm with your password, it happens at once, and if you have a subscription it is cancelled as part of the same action. Both need extension version 1.1.4 or later.
+
+For everything else, or if one of those controls is not working for you, contact us at **info@javieraguilar.ai** and we will action it and confirm by email. We will respond within one month.
 
 **Complaints.** If you think we have handled your data badly, please tell us first — it is usually the fastest way to fix it. You also have the right to complain to a supervisory authority without going through us. In the UK that is the Information Commissioner’s Office, at ico.org.uk. If you are in the EEA, you can complain to the authority in the country where you live.
 
