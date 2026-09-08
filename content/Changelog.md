@@ -8,6 +8,17 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 ---
 
+## 1.1.5 — pendiente de empaquetar
+
+> Esta entrada no lleva fecha porque la versión aún no se ha empaquetado. La fecha se pone el día del paquete, como el resto.
+
+- You can now use the extension **without an account**. Opening it for the first time asks how you want to start: sign in, or continue without an account.
+- Choosing to continue without one says, before you decide, what you give up: your loop runs are not recorded, so there is no run history and no CSV when a loop finishes, and the templates you write stay in this browser only — they are not synced, and they go when the extension does.
+- Signing in later does not upload what you wrote as a guest. It stays in this browser, and it comes back if you sign out.
+- Until this version, opening the popup without a session showed `Not authenticated` where the templates go. There was no way to use the extension at all without creating an account first.
+
+---
+
 ## 1.1.4 — 2026-09-04
 
 - The strip at the top of the popup now shows what you have used against what your plan allows: templates, runs this month, and the largest list you can send in one go. That last number used to appear only when an upload was refused, which is the worst moment to learn a limit exists.
