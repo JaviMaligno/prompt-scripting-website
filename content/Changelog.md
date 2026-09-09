@@ -8,14 +8,29 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 ---
 
-## 1.1.5 — pendiente de empaquetar
+## 1.1.5 — 2026-09-09
 
-> Esta entrada no lleva fecha porque la versión aún no se ha empaquetado. La fecha se pone el día del paquete, como el resto.
+**You can now use the extension without an account.** Opening it for the first time asks how you want to start: sign in, or continue without one.
 
-- You can now use the extension **without an account**. Opening it for the first time asks how you want to start: sign in, or continue without an account.
-- Choosing to continue without one says, before you decide, what you give up: your loop runs are not recorded, so there is no run history and no CSV when a loop finishes, and the templates you write stay in this browser only — they are not synced, and they go when the extension does.
+- Choosing to continue without an account says, before you decide, what you give up: your loop runs are not recorded, so there is no run history and no CSV when a loop finishes, and the templates you write stay in this browser only — they are not synced, and they go when the extension does.
 - Signing in later does not upload what you wrote as a guest. It stays in this browser, and it comes back if you sign out.
+- Without an account you get the same limits as the free plan — 10 templates, 20 loop runs a month, 200 rows per list — counted in this browser. An account is where a plan means something.
 - Until this version, opening the popup without a session showed `Not authenticated` where the templates go. There was no way to use the extension at all without creating an account first.
+
+**Gemini works again.** Not one row of a loop was reaching it: the extension was pressing the wrong button on the page — first its own, then Gemini's sidebar toggle — because it looked for a send button by its English label and the interface was in Spanish. It now finds the composer's button whatever language the page is in. Answers from Gemini are captured again too.
+
+**Signing in and signing up are much faster.** Opening the extension with an account took two seconds before you saw your templates; it now takes about half. Signing up took nearly three seconds and now takes under half a second. Both were doing work that was not needed: one extra request each, and every request was travelling to a server on the wrong side of the Atlantic from the database.
+
+**Smaller things you would have noticed:**
+
+- Without an account, the header offered to "Log out" while the line beside it said you were not signed in. It now offers to sign in, which is what you actually want from there — and it was the only way to reach the sign-in form at all.
+- Signing out now takes you back to the first screen instead of to the password field, so the templates you wrote without an account are one click away instead of three.
+- When a loop cannot start because the page was open before the extension was installed or updated, it no longer spends one of your monthly runs. The message asks you to reload the tab and try again; following that advice used to cost a run each time.
+- The message you get when you reach a limit without an account no longer tells you to upgrade to Pro, which you cannot do without an account in the first place.
+- Saving a template from a chat no longer copies the words "You said" or the question twice into it.
+- The tooltip on the extension's icon is fully translated — it used to leave English words in the middle of it.
+- A cell holding `$&`, `` $` `` or `$$` — a price range, say — now reaches the chat exactly as written.
+- Pasting a list with one column when the template needs two is refused before anything is sent, instead of quietly sending the same prompt on every row.
 
 ---
 
