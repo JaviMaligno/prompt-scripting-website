@@ -146,14 +146,20 @@ export default function Pricing({ proPrice }: PricingProps) {
                 Pricing
               </h1>
               <p className="text-lg text-gray-600">
-                Prompt Scripter is free to use. The free plan has limits rather than an expiry
-                date, so it stays usable for as long as you want it. Pro lifts those limits for a
-                flat monthly price.
+                Prompt Scripter is free to use, and you can try it without an account at all.
+                The free plan has limits rather than an expiry date, so it stays usable for as long
+                as you want it. Pro lifts those limits for a flat monthly price.
               </p>
             </div>
 
             <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2">
               <PlanCard plan={FREE_PLAN}>
+                <p className="mb-4 rounded border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-600">
+                  You can try it without an account. What you write as a guest stays in this
+                  browser, your runs are not recorded, and the limits above still apply — counted
+                  in the browser, which means you could get around them if you set out to. An
+                  account is where the limits, the run history and the sync actually live.
+                </p>
                 <a
                   href={CHROME_INSTALL_URL}
                   className="inline-flex w-full items-center justify-center rounded bg-primary px-6 py-3 text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
