@@ -21,6 +21,12 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 **Signing in and signing up are much faster.** Opening the extension with an account took two seconds before you saw your templates; it now takes about half. Signing up took nearly three seconds and now takes under half a second. Both were doing work that was not needed: one extra request each, and every request was travelling to a server on the wrong side of the Atlantic from the database.
 
+**Your results now say whether each answer was seen to finish.** The exported CSV has two new columns: one saying `yes`, `no` or `unknown` for every row, and one saying why when the answer is `no`.
+
+This matters because of what used to happen silently. If you left the tab in the background — which is what "start it and walk away" invites you to do — the page stops updating the answer, and the loop could file a third of a reply as if it were the whole thing. The run still finished green and nothing said otherwise. The same went for an answer ChatGPT moved into its editor, where only the introduction stayed in the chat.
+
+None of that is fixed by these columns; what changes is that you can now see which rows to check instead of reading all of them. Rows from runs made before this version say `unknown`, because nobody measured them either way.
+
 **Smaller things you would have noticed:**
 
 - Without an account, the header offered to "Log out" while the line beside it said you were not signed in. It now offers to sign in, which is what you actually want from there — and it was the only way to reach the sign-in form at all.
