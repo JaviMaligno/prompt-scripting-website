@@ -23,7 +23,7 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 **Your results now say whether each answer was seen to finish.** The exported CSV has two new columns: one saying `yes`, `no` or `unknown` for every row, and one saying why when the answer is `no`.
 
-This matters because of what used to happen silently. If you left the tab in the background — which is what "start it and walk away" invites you to do — the page stops updating the answer, and the loop could file a third of a reply as if it were the whole thing. The run still finished green and nothing said otherwise. The same went for an answer ChatGPT moved into its editor, where only the introduction stayed in the chat.
+This matters because of what used to happen silently. If you left the tab in the background — which is what "start it and walk away" invites you to do — the page stops updating the answer, and the loop could file a third of a reply as if it were the whole thing. The run still finished green and nothing said otherwise. The same goes for an answer opened in ChatGPT's editor, which takes the text out of the chat and leaves only the introduction behind.
 
 None of that is fixed by these columns; what changes is that you can now see which rows to check instead of reading all of them. Rows from runs made before this version say `unknown`, because nobody measured them either way.
 
