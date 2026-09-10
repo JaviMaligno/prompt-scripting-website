@@ -2,9 +2,21 @@
 
 What changed in each version of the Prompt Scripter extension for Chrome, newest first. Each line describes what the change means for someone using the extension rather than what was edited in the code.
 
-**1.1.4 is the version the Chrome Web Store serves. Checked on 2026-09-07.** Chrome installs an update only while the extension is idle, so an install can sit on an older version for a few hours after a new one is published.
+**1.1.5 is the version the Chrome Web Store serves. Checked on 2026-09-10.** Chrome installs an update only while the extension is idle, so an install can sit on an older version for a few hours after a new one is published.
 
 The date on each entry is the day that version was packaged. It is not the day the version was published, and no entry here records which version reached whom.
+
+---
+
+## 1.1.6 — 2026-09-10
+
+**The buttons no longer show up on Claude's settings pages.** Templates and Save as Template were being drawn on pages with no conversation on them at all. On the organization settings page they landed inside the team-name row, right beside the field that holds the name of your team.
+
+Two mistakes in a row put them there. The extension checked which site it was on but never which page, so a settings page was prepared exactly like a chat. Then, looking for the box you type into, it settled on the only large text field on that page — the one for instructions that apply to the whole organization — and took it for the chat composer. The buttons ended up somewhere else again: attached to the first form on the page, which holds the team's name and does not contain that text field. That is why the result looked arbitrary rather than merely misplaced — what triggered the detection and what received the buttons had nothing to do with each other.
+
+What is worth knowing beyond the appearance: with a settings field mistaken for the composer, the extension reported itself ready to work on a page where there is nothing to send. Anything that types on your behalf — a loop, above all — was being aimed at a configuration field.
+
+On a chat nothing moves. The buttons go exactly where they went before, which was checked side by side against the published version rather than assumed.
 
 ---
 
