@@ -13,8 +13,12 @@ const FEATURES: FeatureItem[] = [
     description: 'Feed a template a list of rows and run it through the chat, row by row.',
   },
   {
-    title: 'Works Everywhere You Do',
-    description: 'Seamless integration with major AI chat platforms.',
+    title: 'Works in ChatGPT, Claude and Gemini',
+    // Named, not gestured at: "major AI chat platforms" tells a reader
+    // nothing and a search engine less. "Integration" was also the wrong
+    // word — it types into the chat you already use, it does not connect
+    // itself to anything of yours.
+    description: 'It types into the chat you already use. No API key, no setup beyond installing it.',
   },
 ]
 

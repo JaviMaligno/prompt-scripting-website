@@ -1,5 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#4F46E5"/>
-  <path d="M18 22h28v4H18zM18 30h20v4H18zM18 38h24v4H18z" fill="#fff"/>
+<!-- The extension's own icon, copied verbatim from
+     prompt-scripter-extension/extension/icons/icon-small.svg so that the
+     store listing and this site are recognisably the same product. The
+     small variant is the one used here because a favicon is drawn at 16px.
+     If the extension's icon changes, this file and the two generated ones
+     beside it (favicon.ico, apple-touch-icon.png) are regenerated from it. -->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Variante de B pensada para 16px: mismo concepto (llaves + filas) con el trazo
+       casi al doble y UNA sola barra, porque a 16px dos barras se empastan.
+       Trazo 16/128 = 2px reales a 16px; barra 24x14 = 3x1,75px. -->
+  <rect x="0" y="0" width="128" height="128" rx="26" fill="#667eea"/>
+  <path d="M 48 26
+           C 34 26 34 40 34 48
+           C 34 57 26 58 26 58
+           L 26 70
+           C 26 70 34 71 34 80
+           C 34 88 34 102 48 102"
+        fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 80 26
+           C 94 26 94 40 94 48
+           C 94 57 102 58 102 58
+           L 102 70
+           C 102 70 94 71 94 80
+           C 94 88 94 102 80 102"
+        fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="52" y="57" width="24" height="14" rx="7" fill="#ffffff"/>
 </svg>
-

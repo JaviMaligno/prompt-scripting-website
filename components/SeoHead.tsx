@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { DEFAULT_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/constants'
+import { DEFAULT_DESCRIPTION, HOME_TITLE, SITE_NAME, SITE_URL } from '@/lib/constants'
 
 interface SeoHeadProps {
   readonly title?: string
@@ -9,10 +9,14 @@ interface SeoHeadProps {
 }
 
 export function SeoHead({ title, description, path, noindex }: SeoHeadProps) {
-  const fullTitle = title ? `${title} — ${SITE_NAME}` : SITE_NAME
+  // Inner pages read as "Pricing — Prompt Scripter"; the homepage, which has
+  // no title of its own to prefix, gets HOME_TITLE rather than the bare brand.
+  const fullTitle = title ? `${title} — ${SITE_NAME}` : HOME_TITLE
   const url = path ? `${SITE_URL}${path}` : SITE_URL
   const desc = description || DEFAULT_DESCRIPTION
-  const ogImage = `${SITE_URL}/og.svg`
+  // PNG, not SVG: no social network renders an SVG card, so the old og.svg
+  // meant every link shared anywhere appeared with no image at all.
+  const ogImage = `${SITE_URL}/og.png`
   return (
     <Head>
       <title>{fullTitle}</title>
