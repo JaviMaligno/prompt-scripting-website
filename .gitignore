@@ -37,3 +37,4 @@ next-env.d.ts
 *.env
 # Anotaciones locales: se movieron al repo privado, este repo es publico
 TODO.md
+.superpowers/

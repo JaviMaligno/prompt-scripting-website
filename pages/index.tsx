@@ -3,7 +3,10 @@ import { StructuredData } from '@/components/StructuredData'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { Hero } from '@/components/sections/Hero'
-import { Features } from '@/components/sections/Features'
+import { BeforeAfter } from '@/components/sections/BeforeAfter'
+import { OnePromptOrNot } from '@/components/sections/OnePromptOrNot'
+import { WhoItsFor } from '@/components/sections/WhoItsFor'
+import { TrustStrip } from '@/components/sections/TrustStrip'
 import { Demo } from '@/components/sections/Demo'
 import { CTA } from '@/components/sections/CTA'
 import { Waitlist } from '@/components/sections/Waitlist'
@@ -16,7 +19,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Features />
+        <BeforeAfter />
+        <OnePromptOrNot />
+        <WhoItsFor />
+        <TrustStrip />
         <Demo />
         <CTA />
         <Waitlist />
@@ -25,5 +31,3 @@ export default function Home() {
     </>
   )
 }
-
-

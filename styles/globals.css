@@ -41,3 +41,35 @@ body,
   .prose img { page-break-inside: avoid; break-inside: avoid; }
   .prose a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.9em; }
 }
+
+/*
+  RunTable (landing hero, step 3). The rows start hidden only when the
+  component has mounted and marked itself `data-armed`, so a reader without
+  JavaScript sees the finished table. `data-playing` starts the sequence; each
+  row's delay comes from the --i custom property set inline.
+*/
+.run-table[data-armed] .run-row { opacity: 0; transform: translateY(4px); }
+.run-table[data-armed] .run-bar > span { width: 0; }
+.run-table[data-armed] .run-done { opacity: 0; }
+
+.run-table[data-playing] .run-row {
+  animation: run-row-in 0.35s ease-out forwards;
+  animation-delay: calc(0.5s + var(--i) * 0.9s);
+}
+.run-table[data-playing] .run-bar > span {
+  animation: run-bar-fill 3.9s linear forwards;
+  animation-delay: 0.5s;
+}
+.run-table[data-playing] .run-done {
+  animation: run-row-in 0.35s ease-out forwards;
+  animation-delay: 4.3s;
+}
+
+@keyframes run-row-in { to { opacity: 1; transform: none; } }
+@keyframes run-bar-fill { to { width: 100%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .run-table[data-armed] .run-row,
+  .run-table[data-armed] .run-done { opacity: 1; transform: none; animation: none; }
+  .run-table[data-armed] .run-bar > span { width: 100%; animation: none; }
+}
