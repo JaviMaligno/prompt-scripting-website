@@ -57,7 +57,7 @@ export function Hero() {
               <br />
               Dunmore Inc
               <br />
-              <span className="text-gray-400">… 196 more</span>
+              <span className="text-gray-500">… 196 more</span>
             </p>
           </li>
           <li className="rounded-2xl bg-white p-6 shadow-xl shadow-indigo-100 ring-1 ring-gray-100">

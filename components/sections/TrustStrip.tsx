@@ -7,8 +7,8 @@ import { CheckIcon } from '@/components/icons'
 */
 const CLAIMS: ReadonlyArray<readonly [string, string]> = [
   ['No API key', ''],
-  ['No token bill', 'it uses the chat you already pay for'],
-  ['Nothing to install', 'beyond the extension'],
+  ['No token bill', ' — it uses the chat you already pay for'],
+  ['Nothing to install', ' beyond the extension'],
 ]
 
 export function TrustStrip() {
@@ -20,7 +20,7 @@ export function TrustStrip() {
             <CheckIcon className="h-5 w-5 flex-none text-green-600" />
             <span>
               <span className="font-semibold text-gray-900">{strong}</span>
-              {rest ? ` — ${rest}` : ''}
+              {rest}
             </span>
           </li>
         ))}

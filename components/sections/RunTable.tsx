@@ -44,7 +44,7 @@ export function RunTable() {
     >
       <table className="w-full text-sm">
         <thead>
-          <tr className="text-left text-xs font-medium uppercase tracking-wide text-gray-400">
+          <tr className="text-left text-xs font-medium uppercase tracking-wide text-gray-500">
             <th className="pb-2 font-medium">company</th>
             <th className="pb-2 font-medium">industry</th>
           </tr>

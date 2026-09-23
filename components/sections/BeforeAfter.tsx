@@ -18,7 +18,7 @@ export function BeforeAfter() {
         </h2>
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           <div className="rounded-2xl bg-red-50 p-7 ring-1 ring-red-100">
-            <p className="text-xs font-semibold uppercase tracking-widest text-red-600">Today</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-red-700">Today</p>
             <p className="mt-4 text-lg leading-relaxed text-gray-800">
               Copy the prompt → swap the name → paste → wait → copy the answer into the sheet
             </p>
