@@ -10,6 +10,13 @@ import { CHROME_INSTALL_URL } from '@/lib/constants'
   work, and the screenshot shows the thing happening: the same prompt, once per
   row, with the answers landing in the thread.
 
+  The second outside reader (2026-09-22, an SEO specialist) asked the obvious
+  question the old examples invited: why not paste the whole list into one
+  prompt? For screening or sizing, that works. So the examples are now ones
+  where every row needs its own investigation, and the paragraph says what
+  comes out: one conversation by default (a chat per row is an opt-in box),
+  and a CSV, which only an account gets.
+
   The meta description and the store listing keep using DEFAULT_DESCRIPTION;
   this copy is for the person, that one is for the crawler and the store.
 */
@@ -21,10 +28,12 @@ export function Hero() {
           One prompt. Every row of your list. Inside the chat you already use.
         </h1>
         <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
-          Fifty candidates to screen with the same criterion. Forty markets to size with the same
-          question. Prompt Scripter takes the prompt you already wrote, with blanks for what
-          changes, and sends it once per row into your ChatGPT, Claude or Gemini tab. The
-          answers arrive in the thread, where you were reading them anyway.
+          Five hundred companies to classify by industry. Thirty countries whose data sources you
+          need to research. Each row means finding something out, and one long prompt with the
+          whole list gets you a summary or a guess. Prompt Scripter takes the prompt you already
+          wrote, with blanks for what changes, and sends it once per row into your ChatGPT, Claude
+          or Gemini tab: one conversation, one turn per row. With an account, the run ends in a
+          CSV with one line per row.
         </p>
         <div className="flex items-center gap-4">
           <a className="inline-block rounded bg-primary text-white px-6 py-3" href={CHROME_INSTALL_URL}>Install for Chrome</a>
