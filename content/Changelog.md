@@ -8,6 +8,16 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 ---
 
+## 1.1.7 — 2026-09-23
+
+**The buttons are back on ChatGPT.** Since 1.1.6 the extension could open ChatGPT and not show Templates or Save as Template at all. The change that kept the buttons off Claude's settings pages also asked every chat box to prove it was a chat box, and ChatGPT's empty composer carries nothing that proves it: its label reads "Chatear con ChatGPT" and there is no send button until you type. The extension now recognises ChatGPT's composer by the name ChatGPT itself gives it. This was checked on the live site with a loop run end to end.
+
+**Claude's routine editor and Gemini's Gem editor are treated as editors, not chats.** The buttons stay there on purpose. You can save a routine's or a Gem's instructions as a template, or insert a template into them. What no longer happens is a list running in them: nothing on those pages sends a message, so a loop could only type rows into the instructions. Pressing Run on one of them now says so, and nothing is created or counted against your runs.
+
+**On Gemini's Gem editor the buttons no longer cover the instructions.** They were drawn on top of the first line of the text. They now sit under the box.
+
+---
+
 ## 1.1.6 — 2026-09-10
 
 **The buttons no longer show up on Claude's settings pages.** Templates and Save as Template were being drawn on pages with no conversation on them at all. On the organization settings page they landed inside the team-name row, right beside the field that holds the name of your team.
