@@ -100,7 +100,7 @@ Sustituye al párrafo «Why not paste the whole list into one prompt?» del PR #
 ### 4 · Para quién (componente nuevo `WhoItsFor`)
 
 - Título: «Made for the lists you already work through by hand»
-- Cuatro tarjetas (dos por fila en móvil), cada una con icono de línea, oficio,
+- Cuatro tarjetas (una columna por debajo de 640 px, dos hasta 1024 px, cuatro por encima), cada una con icono de línea, oficio,
   una frase y lo que sale:
   - Compliance — «Companies to classify, countries to check against the same
     criteria.» → one label per company
@@ -130,8 +130,8 @@ sería ambigua.
 ### 7 · Cierre (componente `CTA`, reescrito) + `Waitlist`
 
 - Bloque índigo con esquinas redondeadas: «Try it on your next list», la línea
-  «Free: 20 runs a month, up to 200 rows each.» con un enlace «See Pro» a
-  `/pricing`, y el botón de instalar en blanco.
+  «Free — Runs: 20 per month · Dataset rows: 200 per upload.» con un enlace
+  «See Pro» a `/pricing`, y el botón de instalar en blanco.
 - Los límites salen de `FREE_PLAN.limits` en `lib/pricing.ts` («20 per month»,
   «200 per upload»), no escritos a mano. No se muestra ningún precio: el precio vive en Stripe.
 - `Waitlist` se queda exactamente como está, debajo.
