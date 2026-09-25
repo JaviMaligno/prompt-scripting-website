@@ -8,6 +8,12 @@ The date on each entry is the day that version was packaged. It is not the day t
 
 ---
 
+## 1.1.8 — 2026-09-25
+
+**Prompt Scripter works on ChatGPT's new layout.** ChatGPT is gradually switching people to a redesigned page, the one with a Chat / Work switch at the top. On it, 1.1.7 showed no buttons at all, and a list could not run: each row was sent, but the extension never recognised the answer, so it waited on every row and the results came out empty. It now finds the chat box and reads the answers on both the old page and the new one. This was checked on the live site: three rows sent, three answers captured, in 24 seconds.
+
+---
+
 ## 1.1.7 — 2026-09-23
 
 **The buttons are back on ChatGPT.** Since 1.1.6 the extension could open ChatGPT and not show Templates or Save as Template at all. The change that kept the buttons off Claude's settings pages also asked every chat box to prove it was a chat box, and ChatGPT's empty composer carries nothing that proves it: its label reads "Chatear con ChatGPT" and there is no send button until you type. The extension now recognises ChatGPT's composer by the name ChatGPT itself gives it. This was checked on the live site with a loop run end to end.
