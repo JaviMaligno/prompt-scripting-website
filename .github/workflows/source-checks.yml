@@ -26,3 +26,6 @@ jobs:
       - name: Build when ready
         if: github.event.pull_request.draft == false
         run: npm run build
+      - name: Offline Typography selector compatibility
+        if: github.event.pull_request.draft == false
+        run: node security/css-selector.contract.cjs
