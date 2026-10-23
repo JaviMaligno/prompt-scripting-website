@@ -1,0 +1,31 @@
+name: Source compatibility
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+permissions:
+  contents: read
+concurrency:
+  group: source-compatibility-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: '1'
+      # Exercise the existing offline pricing fallback; never call billing here.
+      BILLING_PRICE_URL: http://127.0.0.1:9/unused
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - run: npx --no-install tsc --noEmit --incremental false
+      - run: npm run lint
+      - name: Build when ready
+        if: github.event.pull_request.draft == false
+        run: npm run build
+      - name: Offline Typography selector compatibility
+        if: github.event.pull_request.draft == false
+        run: node security/css-selector.contract.cjs

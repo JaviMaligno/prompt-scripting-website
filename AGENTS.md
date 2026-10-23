@@ -1,6 +1,6 @@
 # AGENTS.md — Prompt Scripter website
 
-Marketing and legal site for the **Prompt Scripter** Chrome extension: landing page, pricing, waitlist, changelog and legal documents. Next.js 14 (pages router) + TypeScript + Tailwind, deployed on Vercel. This repository is **public** — never commit secrets, private notes or internal infrastructure details.
+Marketing and legal site for the **Prompt Scripter** Chrome extension: landing page, pricing, waitlist, changelog and legal documents. Next.js 15.5.28 (pages router) + TypeScript + Tailwind, deployed on Vercel. This repository is **public** — never commit secrets, private notes or internal infrastructure details.
 
 ## Structure
 
@@ -20,14 +20,14 @@ Import alias: `@/*` maps to the repo root (`tsconfig.json`).
 ## Commands
 
 ```bash
-npm install
+npm ci --ignore-scripts
 npm run dev      # next dev, http://localhost:3000
 npm run build    # next build (lint + type errors fail the build)
 npm run start    # next start -p 3000
 npm run lint     # next lint (eslint next/core-web-vitals)
 ```
 
-Containerised alternative: `docker compose up` (Node 20 image, bind mount, runs `npm install && npm run dev -- -p 3000`). There is no Dockerfile and no test suite; verify changes with `npm run build` and `npm run lint`.
+Containerised alternative: `docker compose up` (Node 24.22.1 image, bind mount, runs `npm ci --ignore-scripts && npm run dev -- -p 3000`). There is no Dockerfile and no test suite; verify changes with `npm run build` and `npm run lint`.
 
 ## Environment variables
 
